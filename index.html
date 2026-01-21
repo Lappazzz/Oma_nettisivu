@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Roope Lappalainen CV">
-    <meta name="keywords" content="HTML, CSS, JavaScript, portfolio">
+    <meta name="description" content="Roope Lappalainen – CV ja portfolio">
+    <meta name="keywords" content="HTML, CSS, JavaScript, React, Next.js, portfolio">
     <meta name="author" content="Roope Lappalainen">
     <title>Roope Lappalainen | Portfolio</title>
     <link rel="icon" href="images/LzLogo.ico">
@@ -20,11 +20,15 @@
     <!--- header/navbar-->
     <nav>
       <div class="logo">
-        <h1><a href="#"><img class="photo" src="images/LzLogo3.png" alt="logo"> Roope Lappalainen</a></h1>
+        <h1>
+          <a href="#">
+            <img class="photo" src="images/LzLogo3.png" alt="logo"> Roope Lappalainen
+          </a>
+        </h1>
       </div>
       <ul class="nav-links">
         <li><a href="#historia" class="active">Historia</a></li>
-        <li><a href="#portfolio" class="active">Portfolio</a></li>
+        <li><a href="#portfolio" class="active">Osaaminen</a></li>
         <li><a href="#harrastukset" class="active">Harrastukset</a></li>
       </ul>
       <div class="burger">
@@ -42,17 +46,21 @@
         <div class="tiedot_teksti">
           <h1>Nimeni on <br> ROOPE LAPPALAINEN</h1>
           <br>
-          <p>Olen viidennen vuoden tieto- ja viestintätekniikan opiskelija, jolla on vahva kiinnostus tietotekniikkaan. Opintojeni aikana olen oppinut koodaamista ja web-sovellusten kehittämistä. Lisäksi olen pyörittänyt omaa verkkokauppaa, mikä on antanut arvokasta kokemusta yritystoiminnan eri osa-alueilta. Olen myös hyödyntänyt oppimiani taitoja verkkokaupan kehittämisessä.</p>
+          <p>Olen valmistunut tieto- ja viestintätekniikan insinööriksi (AMK). Kiinnostukseni painottuu web-kehitykseen,
+            järjestelmiin ja käytännön ongelmanratkaisuun. Opinnoissani ja projektitöissäni olen kehittänyt osaamistani
+            modernien web-sovellusten toteuttamisessa.</p>
           <br>
-          <p>Työkokemusta olen kartuttanut palvelupisteasiantuntijana, ja autan mielelläni myös ystäviäni teknisissä ongelmissa. Olen motivoitunut oppimaan uutta ja kehitän jatkuvasti taitojani tietotekniikan parissa.</p>
+          <p>Pyöritän omaa verkkokauppaa, jonka kautta olen saanut käytännön kokemusta verkkokauppa-alustoista,
+            integraatioista, suorituskyvyn optimoinnista ja teknisestä ylläpidosta. Olen kehittänyt kauppaa myös
+            headless-arkkitehtuurilla (WordPress + WooCommerce taustalla, erillinen React/Next.js-frontend).</p>
           <br>
-          <p>Työskentelen sujuvasti sekä tiimissä että itsenäisesti, myös paineen alla. Olen huumorintajuinen, helposti lähestyttävä ja tulen toimeen erilaisten ihmisten kanssa.
-          </p>
+          <p>Työkokemusta minulla on palvelupisteasiantuntijana, jossa ratkon loppukäyttäjien teknisiä ongelmia
+            ja toimin osana isompaa tukiorganisaatiota. Työskentelen sujuvasti sekä tiimissä että
+            itsenäisesti ja pysyn rauhallisena myös paineen alla. Olen helposti lähestyttävä, huumorintajuinen ja tulen
+            hyvin toimeen erilaisten ihmisten kanssa.</p>
         </div>
       </div>
     </section>
-
-
     <!--- Omat tiedot -->
 
     <!--- historia -->
@@ -63,15 +71,15 @@
       <div class="timeline">
         <div class="container left">
           <div class="content">
-            <h1><i class="fas fa-graduation-cap"></i>2017-2020</h1>
+            <h1><i class="fas fa-graduation-cap"></i>2017–2020</h1>
             <h3>Jyväskylän Lyseon Lukio</h3>
-            <p>Valmistuin ylioppilaaksi Jyväskylän Lyseon Lukiossa kirjoittamalla äidinkielen, englannin, pitkän matematiikan, fysiikan ja kemian.</p>
+            <p>Valmistuin ylioppilaaksi kirjoittamalla äidinkielen, englannin, pitkän matematiikan, fysiikan ja kemian.</p>
           </div>
         </div>
 
         <div class="container right">
           <div class="content">
-            <h1><i class="fas fa-briefcase"></i>2019 Kesä</h1>
+            <h1><i class="fas fa-briefcase"></i>2019 kesä</h1>
             <h3>Bolt.Works</h3>
             <p>Toimin rakennusapulaisena Laukaassa Rakennusliike Porrassalmen työmaalla.</p>
           </div>
@@ -79,9 +87,9 @@
 
         <div class="container left">
           <div class="content">
-            <h1><i class="fas fa-briefcase"></i>2020 Kesä</h1>
+            <h1><i class="fas fa-briefcase"></i>2020 kesä</h1>
             <h3>Bolt.Works</h3>
-            <p>Toimin rakennusapulaisena alkuun useammilla työmailla, kunnes loppukesästä olin kaukomaalauksen työmailla.</p>
+            <p>Toimin rakennusapulaisena useammilla työmailla, loppukesästä pääosin kaukomaalauksen työmailla.</p>
           </div>
         </div>
 
@@ -92,122 +100,153 @@
             <p>Suoritin asepalveluksen.</p>
           </div>
         </div>
-        
 
         <div class="container left">
           <div class="content">
-            <h1><i class="fas fa-briefcase"></i>2021 Alkuvuosi / Kesä</h1>
+            <h1><i class="fas fa-briefcase"></i>2021 alkuvuosi / kesä</h1>
             <h3>Workpower</h3>
-            <p>Toimin alkuvuoden rakennusapulaisena useammalla työmaalla, sekä kesällä olin Keskisuomen rakennus- ja raudoituksella töissä, jossa toimeenkuvaani kuului
-              harjateräksien leikkaus, taivuttaminen, muottien hitsaaminen sekä kaikkien tilauksien siirtely kurottajalla, trukilla ja nosturilla.</p>
+            <p>Toimin rakennusapulaisena useammalla työmaalla. Kesällä työskentelin Keski-Suomen rakennus- ja
+              raudoituksella, jossa tehtäviini kuului harjaterästen leikkaus ja taivutus, muottien hitsaaminen sekä
+              tilausten siirtely kurottajalla, trukilla ja nosturilla.</p>
           </div>
         </div>
 
         <div class="container right">
           <div class="content">
-            <h1><i class="fas fa-school"></i>2021</h1>
-            <h3>Jamk Tieto- ja viestintätekniikka</h3>
-            <p>Aloitin ICT-insinööri opinnot Jyväskylän ammattikorkeakoulussa.</p>
+            <h1><i class="fas fa-school"></i>2021–2025</h1>
+            <h3>Jamk – Tieto- ja viestintätekniikka</h3>
+            <p>Aloitin ICT-insinööriopinnot Jyväskylän ammattikorkeakoulussa vuonna 2021 ja valmistuin insinööriksi
+              (AMK) 2025. Opinnoissa painopisteinä olivat web-kehitys, ohjelmointi, tietoverkot ja palvelinjärjestelmät.
+            </p>
           </div>
         </div>
 
-      <div class="container left">
-        <div class="content">
-          <h1><i class="fas fa-briefcase"></i>2022 Kesä/syksy</h1>
-          <h3>Workpower</h3>
-          <p>Toimin rakennusmiehenä erilaisissa kohteissa.</p>
-          <br>
-            <p>Syksyllä olin päätoimisesti rakennusliike Porrassalmen työmaalla lattiakorjaus kohteessa, opiskeluiden ohella. </p>
+        <div class="container left">
+          <div class="content">
+            <h1><i class="fas fa-briefcase"></i>2022 kesä / syksy</h1>
+            <h3>Workpower</h3>
+            <p>Toimin rakennusmiehenä erilaisissa kohteissa.</p>
+            <br>
+            <p>Syksyllä työskentelin päätoimisesti Rakennusliike Porrassalmen työmaalla lattiakorjauskohteessa
+              opintojen ohella.</p>
+          </div>
         </div>
-      </div>
-      <div class="container right">
-        <div class="content">
-          <h1><i class="fas fa-industry"></i>2023 kevät</h1>
-          <h3>Lappaz.fi</h3>
-          <p>Perustin toiminimen, jotta voin sivutoimisesti toimia yrittäjänä.</p>
-          <br>
-          <p>Yritykseni keskittyy 3D-tulostukseen, ja myyn omia tulostettuja tuotteita verkkokaupassani.</p>
-        </div>
-      </div>
-      <div class="container left">
-        <div class="content">
-          <h1><i class="fas fa-briefcase"></i>2023 Kevät</h1>
-          <h3>Istekki</h3>
-          <p>Olin harjoittelijana Istekissä, toimien palvelupisteasiantuntijana. Sain oppia käyttämään AD- ja AAD-järjestelmiä sekä kehitin ongelmanratkaisukykyäni ja asiakaspalvelutaitojani.</p>
-        </div>
-      </div>
-      <div class="container right">
-        <div class="content">
-          <h1><i class="fas fa-briefcase"></i>2024 syksy/kevät -> Nykyinen</h1>
-          <h3>Istekki</h3>
-          <p>Jatkoin töitä opiskeluiden ohella osa-aikaisesti.</p>
-        </div>
-    </div>
-    
 
+        <div class="container right">
+          <div class="content">
+            <h1><i class="fas fa-industry"></i>2023 kevät</h1>
+            <h3>Lappaz.fi</h3>
+            <p>Perustin toiminimen aloittaakseni sivutoimisen yrittäjyyden.</p>
+            <br>
+            <p>Yritykseni keskittyy 3D-tulostukseen. Suunnittelen ja myyn omia 3D-tulostettuja tuotteita
+              erityisesti auto- ja sim racing -käyttöön verkkokauppani kautta.</p>
+          </div>
+        </div>
+
+        <div class="container left">
+          <div class="content">
+            <h1><i class="fas fa-briefcase"></i>2023 kevät</h1>
+            <h3>Istekki – harjoittelu</h3>
+            <p>Toimin harjoittelijana Istekissä palvelupisteasiantuntijana. Opin käyttämään AD- ja AAD-järjestelmiä ja
+              kehitin ongelmanratkaisu- sekä asiakaspalvelutaitojani.</p>
+          </div>
+        </div>
+
+        <div class="container right">
+          <div class="content">
+            <h1><i class="fas fa-briefcase"></i>2024 syksy → nykyinen</h1>
+            <h3>Istekki – palvelupisteasiantuntija</h3>
+            <p>Jatkoin töitä harjoittelun jälkeen osa-aikaisesti opintojen ohella ja valmistumisen jälkeen. Teen
+              palvelupistetyötä, jossa vastaan käyttäjätuesta ja erilaisista ICT-palveluihin liittyvistä tehtävistä.</p>
+          </div>
+        </div>
+      </div>
     </section>
     <!--- historia -->
 
-    <!--- portfolio -->
+    <!--- portfolio / osaaminen -->
     <section id="portfolio">
       <div class="heading-section parallax border">
         <h1><i class="fas fa-book-open icon"></i>Osaaminen</h1>
       </div>
       <div class="portfolio_container">
         <div class="portfolio_box">
-          <h1><i class="far fa-file-code"></i>HTML/CSS</h1>
-          <p>Tämä nettisivusto tehtiin kurssia varten hyödyntäen html ja css-kieliä. Tämä on myös ensimmäinen nettisivusto, jonka olen tehnyt.</p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="fab fa-linux"></i>Linux</h1>
-          <p>Linuxin alkeet sain koulun kurssilta, jonka jälkeen olen hyödyntänyt taitoja Raspberry Pi projektien kanssa. Projekteihin kuuluu esimerkiksi: 
-            <ul>
-              <li>Wireguard/Pi-Hole dns-server</li>
-              <li>3D-tulostimen klipper firmware</li>
-              <li>Homeassistant</li>
-            </ul></p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="fab fa-python"></i>Python</h1>
-          <p>Olen opetellut pythonin käyttöä ohjelmoinnin perusteet kurssilla. Kurssilla muunmuassa opeteltiin ehtolauseita, toistorakenteita, funktioita, luokkia sekä kokoelmia. </p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="far fa-images"></i>Kuvanmuokkaus</h1>
-          <p>Omaa aikaa olen kuluttanut photoshopin, lightroomin ja after effectsin kanssa. Mikään ammattilainen en ole, mutta amatööriksi voisi sanoa. Sivuston favicon on itselleni luoma logo.</p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-cube"></i>Fusion 360</h1>
-          <p>Olen tehnyt CAD:lla 3D-malleja, esimerkiksi autoon juomatelineen, sekä lisämittaritelineitä.</p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-diagram-project"></i>Projektitoiminta ja käytänteet</h1>
-          <p>Osaan perusteet OPF:kehikolle ja projektitoiminnalle.</p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-network-wired"></i></i>Tietoverkot</h1>
-          <p>Osaan tietoverkkojen perusteet, mukaanlukien kytkinten ja reitittimien konfigurointia. </p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="fa-brands fa-react"></i>React</h1>
-          <p>Reactia aloitin omasta kiinnostuksesta opettelemaan. Olen suorittanut kurssin aiheesta, jolla tuotettiin useampia appeja.</p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="fa-brands fa-react"></i>React Native</h1>
-          <p>Olen perehtynyt React Nativeen.</p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="fa-brands fa-android"></i>Android</h1>
-          <p>Olen tutustunut Android Studioon ja ohjelmoinut Kotlinilla.</p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-code"></i>C# ja C++</h1>
-          <p>Olen opiskellut C#- ja C++ -kielien perusteita, mukaan lukien Concurrent programming ja olioperusteinen ohjelmointi.</p>
-        </div>
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-code"></i>Web Visualisointi</h1>
-          <p>Olen käyttänyt Tailwind-CSS -kirjastoa web-visualisoinnissa.</p>
+          <h1><i class="far fa-file-code"></i>HTML / CSS</h1>
+          <p>Hallitsen modernin front-end-kehityksen perusteet: semanttinen HTML, responsiivinen CSS ja
+            käytettävyyteen keskittyvä rakenne. Tämä sivusto kuuluu ensimmäisiin projekteihini, ja sen jälkeen olen
+            toteuttanut useita sivustoja ja käyttöliittymiä.</p>
         </div>
 
+        <div class="portfolio_box">
+          <h1><i class="fab fa-react"></i>React & Next.js</h1>
+          <p>Olen toteuttanut useampia React- ja Next.js-sovelluksia, muun muassa headless-verkkokaupan
+            frontendin sekä erilaisia pienempiä appeja. Hallitsen komponenttipohjaisen kehityksen, tilanhallinnan
+            perusteet ja REST/JSON-rajapintojen hyödyntämisen.</p>
+        </div>
+
+        <div class="portfolio_box">
+          <h1><i class="fa-solid fa-code"></i>JavaScript & TypeScript</h1>
+          <p>Käytän JavaScriptiä ja TypeScriptiä erityisesti web-kehityksessä. Osaan rakentaa rajapintaintegraatioita
+            ja käsitellä dataa selaimessa sekä palvelinpuolella (Next.js).</p>
+        </div>
+
+        <div class="portfolio_box">
+          <h1><i class="fab fa-linux"></i>Linux & palvelimet</h1>
+          <p>Olen käyttänyt Linuxia sekä kouluprojekteissa että omissa ratkaisuissani, esimerkiksi:</p>
+          <ul>
+            <li>Raspberry Pi -projektit (WireGuard, Pi-hole DNS, Home Assistant)</li>
+            <li>3D-tulostimen Klipper-firmware</li>
+            <li>VPS-palvelin (Apache/Nginx, Docker, PM2, MariaDB)</li>
+          </ul>
+        </div>
+
+        <div class="portfolio_box">
+          <h1><i class="fab fa-python"></i>Python</h1>
+          <p>Olen opiskellut Pythonin perusteita: ehtolauseita, toistorakenteita, funktioita, luokkia ja kokoelmia.
+            Olen käyttänyt Pythonia muun muassa pieniin automaatio- ja harjoitusprojekteihin.</p>
+        </div>
+
+        <div class="portfolio_box">
+          <h1><i class="fa-solid fa-network-wired"></i>Tietoverkot</h1>
+          <p>Osaan tietoverkkojen perusteet, mukaan lukien kytkinten ja reitittimien peruskonfiguroinnin, VLANit,
+            palomuuri- ja VPN-ratkaisut (esim. WireGuard).</p>
+        </div>
+
+        <div class="portfolio_box">
+          <h1><i class="fa-solid fa-diagram-project"></i>Projektitoiminta</h1>
+          <p>Tunnen OPF-kehikon ja projektitoiminnan perusperiaatteet. Olen tottunut dokumentoimaan työtäni ja
+            viemään projekteja eteenpäin vaiheittain.</p>
+        </div>
+
+        <div class="portfolio_box">
+          <h1><i class="fa-solid fa-code"></i>C# ja C++</h1>
+          <p>Olen opiskellut C#- ja C++-kielien perusteita, muun muassa oliopohjaista ohjelmointia ja concurrent programming -aiheita.</p>
+        </div>
+
+        <div class="portfolio_box">
+          <h1><i class="fa-brands fa-android"></i>Android & React Native</h1>
+          <p>Olen tutustunut Android Studioon ja ohjelmointiin Kotlinilla sekä perehtynyt React Nativeen
+            mobiilisovellusten toteutuksessa.</p>
+        </div>
+
+        <div class="portfolio_box">
+          <h1><i class="far fa-images"></i>Kuvanmuokkaus</h1>
+          <p>Käytän vapaa-ajalla Photoshopia, Lightroomia ja After Effectsiä. En ole ammattilainen, mutta osaan tuottaa
+            siistiä perusjälkeä esimerkiksi verkkokaupan ja sosiaalisen median kuviin. Sivuston favicon on itse
+            suunnittelemani logo.</p>
+        </div>
+
+        <div class="portfolio_box">
+          <h1><i class="fa-solid fa-cube"></i>Fusion 360 & CAD</h1>
+          <p>Suunnittelen 3D-malleja Fusion 360:llä. Esimerkkeinä auton juomatelineet, lisämittaritelineet ja
+            erilaiset sim racing -osat.</p>
+        </div>
+
+        <div class="portfolio_box">
+          <h1><i class="fa-solid fa-code"></i>Web-visualisointi</h1>
+          <p>Olen käyttänyt Tailwind CSS -kirjastoa web-visualisointiin sekä erilaisia komponenttikirjastoja
+            käyttöliittymien rakentamisessa.</p>
+        </div>
       </div>
     </section>
     <!--- portfolio -->
@@ -223,7 +262,9 @@
           <a href="https://tilastochat.netlify.app/" target="_blank" rel="noopener noreferrer">
             <img src="images/tilastochat.jpg" alt="TilastoChat">
           </a>
-          <p>TilastoChat on toteutettu Next.js:llä ja Tailwindilla. Se on chat-sovellus, jossa voi keskustella tilastoihin liittyvistä aiheista reaaliaikaisesti. Sovellus hyödyntää Tilastokeskuksen dataa ja ChatGPT API:a. Käyttäjä voi kysellä chatin kautta, ja vastaukset pohjautuvat JSON-tiedostoon.</p>
+          <p>TilastoChat on toteutettu Next.js:llä ja Tailwindilla. Sovellus on chat-tyyppinen käyttöliittymä, jossa
+            keskustellaan tilastoihin liittyvistä aiheista. Taustalla hyödynnetään Tilastokeskuksen dataa ja ChatGPT
+            API:a. Käyttäjä voi esittää kysymyksiä, ja vastaukset pohjautuvat JSON-aineistoon.</p>
         </div>
 
         <div class="content_box">
@@ -231,64 +272,80 @@
           <a href="https://www.lappaz.fi/" target="_blank" rel="noopener noreferrer">
             <img src="images/lappaz.jpg" alt="Lappaz verkkokauppa">
           </a>
-          <p>Lappaz.fi on toteutettu WordPressillä ja WooCommercella. Verkkokauppa tarjoaa kattavan valikoiman tuotteita ja sen ylläpitoon kuuluu sekä tekninen kehitys että sisällönhallinta.</p>
+          <p>Lappaz.fi on toteutettu WordPressillä ja WooCommercella. Vastaan verkkokaupan teknisestä kehityksestä,
+            sisällönhallinnasta ja ylläpidosta. Olen lisäksi rakentanut erillisen modernin frontendin headless-mallilla,
+            jonka avulla kaupan suorituskykyä ja käyttökokemusta voidaan parantaa, mutta sitä ei ole vielä viety tuotantoon.</p>
         </div>
       </div>
     </section>
     <!--- projektit -->
 
+    <!--- harrastukset -->
+    <section id="harrastukset">
+      <div class="heading-section parallax border">
+        <h1><i class="fas fa-mug-hot icon"></i>Harrastukset</h1>
+      </div>
+      <div class="portfolio_container">
+        <div class="content_box">
+          <h1><i class="fas fa-dumbbell"></i>Kuntosali</h1>
+          <a href="images/sali.jpg" data-lightbox="image-1"></a>
+          <p>Kuntosalilla käyn säännöllisesti, yleensä 1-3 kertaa viikossa. Treenaan pääasiassa voimaharjoittelua.</p>
+        </div>
 
-<!--- harrastukset -->
-<section id="harrastukset">
-  <div class="heading-section parallax border">
-    <h1><i class="fas fa-mug-hot icon"></i>Harrastukset</h1>
-  </div>
-  <div class="portfolio_container">
-    <div class="content_box">
-      <h1><i class="fas fa-dumbbell"></i>Kuntosali</h1>
-      <a href="images/sali.jpg" data-lightbox="image-1"></a>
-      <p>Painojen kanssa treenamista on tullut harrastettua jo muutama vuosi. Kuntosalilla tulee käytyä yleensä 3-6 kertaa viikossa.</p>
-    </div>
-    <div class="content_box">
-      <h1><i class="fas fa-gamepad"></i>Tietokone pelit</h1>
-      <a href="images/setup.jpg" data-lightbox="image-2"><img src="images/setup.jpg" alt="Setuppi"></a>
-      <p>Nuoruudesta asti on kaikennäköisiä pelejä tullut pelailtua. Ensimmäisinä online peleinä on tullut pelattua League of Legendsiä, ja sitä kautta siirryttyä counter strikeen.</p>
-      <p>Näitäkin pelejä tulee pelattua vieläkin kavereiden kanssa, mutta ehkä joskus vaihtuu peli johonkin toiseen. Ajan myös erilaisia ajopelejä, ja siihen tarkoitukseen olen hankkinut ratin ja polkimet.</p>
-    </div>
-    <div class="content_box">
-      <h1><i class="fas fa-car"></i>Autojen laittaminen</h1>
-      <a href="images/Auto.jpg" data-lightbox="image-3"><img src="images/Auto.jpg" alt="Mersu"></a>
-      <p>Heti 15-vuotiaana mopokortin saatuani, alkoi kiinnostus ajoneuvojen laittoon.
-        Ensiksi tuli laitettua kädellä skootteria. Sen jälkeen ostettiin kevari, joka purettiin atomeiksi ja kasattiin samalla hieman virittäen.
-        Nyt tietysti ollaan siirrytty nelipyöräisiin, mutta ehkä joku päivä tulee taas ostettua kaksipyöräinen, kun kortti sellaiseenkin löytyy.</p>
-    </div>
-    <div class="content_box">
-      <h1><i class="fas fa-cube"></i>3D printtaaminen</h1>
-      <a href="images/3d_print.jpg" data-lightbox="image-4"><img src="images/3d_print.jpg" alt="3D Printteri"></a>
-      <p>Yläkoulussa teknisen opettaja tutustutti minut 3d printtaukseen ja näytti kuinka sitä käytetään.
-        En kuitenkaan tajunnut laitteistosta mitään, mutta ensimmäisenä 3d mallina suunnittelin itselle avaimenperän.
-        No silloin ei vielä heränny innostus, mutta muutaman vuoden päästä palasin aiheeseen ja huomasinkin kuinka hyödyllinen laite voi olla.</p>
-      <br>
-      <p>Vuonna 2020 sain lahjaksi 3d-tulostimen ja siitä asti olen tulostanut itselle, perheelleni ja kavereille erilaisia palikoita kaiken maailman käyttötarkoituksiin.</p>
-      <p>Harrastuksen myötä CAD-ohjelman käyttö on tullut tutuksi.</p>
-    </div>
-    <div class="content_box">
-      <h1><i class="fas fa-camera"></i>Valokuvaus</h1>
-      <a href="images/valokuvaus.jpg" data-lightbox="image-5"><img src="images/valokuvaus.jpg" alt="Valokuvaus"></a>
-      <p>Viimeisimpänä harrastuksena valokuvaus on tullut ajankohtaiseksi, kun hankin järjestelmäkameran. Olen pääasiassa kuvannut autoja ja eläimiä.</p>
-    </div>
-    <div class="content_box">
-      <h1><i class="fas fa-dog"></i>Koirat</h1>
-      <a href="images/koira.jpg" data-lightbox="image-6"><img src="images/koira.jpg" alt="Koirat"></a>
-      <p>Koirien kanssa oleminen on suuri osa vapaa-aikaani. Meillä on kaksi koiraa: Saku, rescuekoira Kreikasta, ja Nemo, kultainennoutaja. Päivittäisten lenkkien lisäksi käymme koirametsässä ja muissa maastoissa. Koiraeläinten kanssa toimiminen tuo paljon iloa ja liikuntaa arkeen.</p>
-    </div>
-  </div>
-</section>
-<!--- harrastukset -->
+        <div class="content_box">
+          <h1><i class="fas fa-gamepad"></i>Tietokonepelit</h1>
+          <a href="images/setup.jpg" data-lightbox="image-2">
+            <img src="images/setup.jpg" alt="Setuppi">
+          </a>
+          <p>Nuoresta asti olen pelannut erilaisia pelejä. Ensimmäisiä online-pelejäni olivat League of Legends ja
+            Counter-Strike. Pelaan edelleen kavereiden kanssa ajan salliessa.</p>
+        </div>
 
+        <div class="content_box">
+          <h1><i class="fas fa-car"></i>Autojen laittaminen</h1>
+          <a href="images/Auto.jpg" data-lightbox="image-3">
+            <img src="images/Auto.jpg" alt="Mersu">
+          </a>
+          <p>Ajoneuvojen laittaminen on ollut mukana 15-vuotiaasta asti, kun sain mopokortin. Ensin tuli rempattua
+            skoottereita, sitten purettiin kevari atomeiksi ja koottiin uudelleen hieman viritettynä. Nykyään keskityn
+            enemmän autoihin, mutta joskus tulevaisuudessa voi taas olla kaksipyöräinen pihassa.</p>
+        </div>
+
+        <div class="content_box">
+          <h1><i class="fas fa-cube"></i>3D-tulostus</h1>
+          <a href="images/3d_print.jpg" data-lightbox="image-4">
+            <img src="images/3d_print.jpg" alt="3D-tulostin">
+          </a>
+          <p>Tutustuin 3D-tulostukseen yläkoulussa teknisen työn tunnilla. Varsinainen innostus syttyi myöhemmin, kun
+            ymmärsin, kuinka monipuolinen ja hyödyllinen laite 3D-tulostin voi olla.</p>
+          <br>
+          <p>Vuonna 2020 sain oman 3D-tulostimen. Siitä lähtien olen tulostanut itselleni, perheelle ja kavereille
+            erilaisia osia moneen käyttöön. Harrastuksen myötä CAD-ohjelmien käyttö on tullut tutuksi.</p>
+        </div>
+
+        <div class="content_box">
+          <h1><i class="fas fa-camera"></i>Valokuvaus</h1>
+          <a href="images/valokuvaus.jpg" data-lightbox="image-5">
+            <img src="images/valokuvaus.jpg" alt="Valokuvaus">
+          </a>
+          <p>Valokuvaus on uudempi harrastus. Hankin järjestelmäkameran ja olen kuvannut erityisesti autoja ja
+            eläimiä, esimerkiksi koiria.</p>
+        </div>
+
+        <div class="content_box">
+          <h1><i class="fas fa-dog"></i>Koirat</h1>
+          <a href="images/koira.jpg" data-lightbox="image-6">
+            <img src="images/koira.jpg" alt="Koirat">
+          </a>
+          <p>Koirat ovat iso osa arkea. Meillä on kaksi koiraa: Saku, rescuekoira Kreikasta, ja Nemo, kultainennoutaja.
+            Käymme päivittäin lenkeillä ja lisäksi koirametsässä sekä erilaisissa maastoissa. Koirien kanssa touhuaminen
+            tuo liikuntaa ja vastapainoa ruututyölle.</p>
+        </div>
+      </div>
+    </section>
+    <!--- harrastukset -->
 
     <!--- Yhteystiedot -->
-
     <section id="yhteystiedot">
       <div class="heading-section parallax border-up">
         <h1><i class="far fa-address-book icon"></i>Yhteystiedot</h1>
@@ -301,9 +358,10 @@
           <h1>roope.lappaz@gmail.com</h1>
         </div>
       </div>
-
     </section>
     <!--- Yhteystiedot -->
 
     <script src="javascript/lightbox-plus-jquery.js"></script>
   </body>
+
+</html>
