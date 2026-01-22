@@ -572,9 +572,9 @@ a:hover {
     }
   
     .container {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
+      width: 85%;
+      padding-left: 4em;
+      padding-right: 0em;
     }
   
     .container::before {
@@ -688,7 +688,7 @@ a:hover {
     padding: 1em;
     border: 2em;
     letter-spacing: 0.2em;
-    font-size: 0.85em;
+    font-size: 0.8em;
   
   }
   
