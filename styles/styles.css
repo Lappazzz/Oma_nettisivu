@@ -54,76 +54,166 @@
   /*----- header/navbar ------*/
   
   nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #252525;
-    font-family: 'Metrophobic', sans-serif;
-    position: fixed;
-    top: 0px;
-    opacity: 80%;
-    width: 100%;
-    z-index: 100000;
-  
-  }
-  
-  .logo {
-    color: rgba(255, 255, 255, 0.815);
-    letter-spacing: 5px;
-    font-size: 20px;
-  }
-  
-  .logo a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.815);
-  }
-  
-  .logo a:hover {
-    color: rgb(0, 0, 255);
-    transition: 0.3s ease;
-  }
-  
+  display: flex;
+  justify-content: space-between;   /* was space-around */
+  align-items: center;
+  min-height: 8vh;
+  background-color: #252525;
+  font-family: 'Metrophobic', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;                      /* stay within viewport */
+  opacity: 80%;
+  z-index: 100000;
+  padding: 0 1rem;                  /* small side padding */
+}
+
+.logo {
+  color: rgba(255, 255, 255, 0.815);
+  letter-spacing: 5px;
+  font-size: 30px;
+}
+
+/* logo link + image */
+
+.logo a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.815);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.logo a:hover {
+  color: rgb(0, 0, 255);
+  transition: 0.3s ease;
+}
+
+.photo {
+  width: 25px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  width: auto;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.815);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 19px;
+}
+
+a:hover {
+  color: rgb(0, 0, 255);
+  transition: 0.3s ease;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.815);
+  margin: 5px;
+}
+
+/* Desktop tweak */
+@media screen and (max-width: 1024px) {
   .nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
+    gap: 0.6rem;
   }
-  
-  .nav-links li {
-    list-style: none;
-  }
-  
-  .nav-links a {
-    color: rgba(255, 255, 255, 0.815);
-    text-decoration: none;
-    font-weight: bold;
+}
+
+/* Small phones: shrink logo text & image */
+@media screen and (max-width: 450px) {
+  .logo {
+    font-size: 1rem;
     letter-spacing: 2px;
-    font-size: 19px;
   }
-  
-  a:hover {
-    color: rgb(0, 0, 255);
-    transition: 0.3s ease;
+
+  .photo {
+    width: 22px;
   }
-  
+}
+
+/*----- mobile burger menu ------*/
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* element selector, not .nav */
+  nav {
+    max-width: 100vw;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: 0;
+    top: 8vh;
+    height: 92vh;
+    background-color: #252525;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    width: 60%;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 1;
+  }
+
   .burger {
-    display: none;
+    display: block;
+    cursor: pointer;
   }
-  
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.815);
-    margin: 5px;
+
+  .nav-active {
+    transform: translateX(0%);
   }
-  
-  @media screen and (max-width:1024px) {
-    .nav-links {
-      width: 50%;
-    }
-  
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px)
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px)
+}
+
   
   /*----- header/navbar ------*/
   
@@ -132,6 +222,10 @@
   @media screen and (max-width:768px) {
     body {
       overflow-x: hidden;
+    }
+
+    .nav {
+      max-width: 100vw;
     }
   
     .nav-links {
@@ -200,8 +294,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 8vh;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    min-height: 100vh; 
+    height: auto;
     display: flex;
     flex-direction: row;
   }
@@ -234,7 +329,7 @@
   .heading-section {
     background-color: #252525;
     text-align: center;
-    color: rgba(0, 0, 0, 0.815);
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     padding: 20px;
     position: relative;
@@ -262,12 +357,13 @@
   
   /*----- heading sectionit ------*/
   
-  #historia {
+  #koulutus {
     background: lightgray;
     display: flex;
     flex-direction: column;
   }
   
+  #historia,
   #portfolio,
   #harrastukset,
   #projektit {
@@ -277,30 +373,111 @@
     display: flex;
     flex-direction: column;
   }
+
+  /*----- koulutus (portfolio-tyyli) ------*/
+
+.koulutus_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center; /* Changed to center for better balance */
+  width: 90%;
+  margin: 2em auto;
+  height: 100%;
+  color: lightgray;
+  padding: 1.25em;
+}
+
+.koulutus_box {
+  padding: 1.5em 1.875em;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  box-shadow: 0.5em 0.6em 0.6em grey;
+  border-radius: 0.3em;
+  height: auto;
+  text-align: center;
+  margin: 1.25em;
+  
+  /* --- THE FIX IS HERE --- */
+  width: 25em;
+  flex-grow: 1;
+  max-width: 45%;
+  min-width: 300px;
+  /* ----------------------- */
+}
+
+.koulutus_box h1 {
+  text-align: center;
+  color: black;
+  padding: 0.5em;
+}
+
+.koulutus_box h3 {
+  text-align: center;
+  color: rgb(0, 0, 255);
+  padding: 0.5em 0;
+}
+
+.koulutus_box h4 {
+  text-align: center;
+  color: black;
+}
+
+.koulutus_box p {
+  color: black;
+  text-align: left;
+}
+
+/* Add a media query to stack them on mobile phones */
+@media screen and (max-width: 768px) {
+    .koulutus_box {
+        max-width: 100%;
+    }
+}
+
+/*----- koulutus (portfolio-tyyli) ------*/
   
   /*----- timeline/historia ------*/
-  .timeline {
+
+  
+.timeline {
     position: relative;
     max-width: 1200px;
-    margin: auto;
+    margin: 1em auto;
     padding: 1.75em auto;
+    padding-top: 30px; 
     margin-top: solid black;
-  }
-  
-  .timeline::after {
+}
+
+/* The vertical line */
+.timeline::after {
     content: '';
     position: absolute;
     width: 0.5em;
     background-color: white;
-    top: 0;
+    top: 10px; 
     bottom: 0;
     left: 50%;
     margin-left: -4px;
     box-shadow: 0.5em 0 0.6em rgb(75, 75, 75);
     z-index: 0;
-  
-  
-  }
+}
+
+/* NEW: The Arrow Head pointing UP */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid white;
+    z-index: 1;
+    filter: drop-shadow(0.2em 0.2em 0.2em rgba(75, 75, 75, 0.5));
+}
   
   .container {
     padding: 0.5em 2em;
@@ -505,12 +682,13 @@
   }
   
   .content_yhteystiedot {
-    color: #c2c2c2;
+    color: rgb(255, 255, 255);
     background-color: #252525;
     text-align: center;
     padding: 1em;
     border: 2em;
     letter-spacing: 0.2em;
+    font-size: 0.85em;
   
   }
   

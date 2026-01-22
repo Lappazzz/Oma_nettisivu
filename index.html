@@ -20,15 +20,17 @@
     <!--- header/navbar-->
     <nav>
       <div class="logo">
-        <h1>
+        <h1 class="logo">
           <a href="#">
             <img class="photo" src="images/LzLogo3.png" alt="logo"> Roope Lappalainen
           </a>
         </h1>
       </div>
       <ul class="nav-links">
-        <li><a href="#historia" class="active">Historia</a></li>
+        <li><a href="#projektit" class="active">Projektit</a></li>
         <li><a href="#portfolio" class="active">Osaaminen</a></li>
+        <li><a href="#koulutus" class="active">Koulutus</a></li>
+        <li><a href="#historia" class="active">Historia</a></li>
         <li><a href="#harrastukset" class="active">Harrastukset</a></li>
       </ul>
       <div class="burger">
@@ -63,108 +65,36 @@
     </section>
     <!--- Omat tiedot -->
 
-    <!--- historia -->
-    <section id="historia">
+    <!--- projektit -->
+    <section id="projektit">
       <div class="heading-section parallax border-down">
-        <h1><i class="fas fa-history icon"></i>Historia</h1>
+        <h1><i class="fas fa-laptop-code icon"></i>Projektit</h1>
       </div>
-      <div class="timeline">
-        <div class="container left">
-          <div class="content">
-            <h1><i class="fas fa-graduation-cap"></i>2017–2020</h1>
-            <h3>Jyväskylän Lyseon Lukio</h3>
-            <p>Valmistuin ylioppilaaksi kirjoittamalla äidinkielen, englannin, pitkän matematiikan, fysiikan ja kemian.</p>
-          </div>
+      <div class="portfolio_container">
+        <div class="content_box">
+          <h1><i class="fas fa-laptop-code"></i>TilastoChat</h1>
+          <a href="https://tilastochat.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <img src="images/tilastochat.jpg" alt="TilastoChat">
+          </a>
+          <p>TilastoChat on toteutettu Next.js:llä ja Tailwindilla. Sovellus on chat-tyyppinen käyttöliittymä, jossa
+            keskustellaan tilastoihin liittyvistä aiheista. Taustalla hyödynnetään Tilastokeskuksen dataa ja ChatGPT
+            API:a. Käyttäjä voi esittää kysymyksiä, ja vastaukset pohjautuvat JSON-aineistoon.</p>
         </div>
 
-        <div class="container right">
-          <div class="content">
-            <h1><i class="fas fa-briefcase"></i>2019 kesä</h1>
-            <h3>Bolt.Works</h3>
-            <p>Toimin rakennusapulaisena Laukaassa Rakennusliike Porrassalmen työmaalla.</p>
-          </div>
-        </div>
-
-        <div class="container left">
-          <div class="content">
-            <h1><i class="fas fa-briefcase"></i>2020 kesä</h1>
-            <h3>Bolt.Works</h3>
-            <p>Toimin rakennusapulaisena useammilla työmailla, loppukesästä pääosin kaukomaalauksen työmailla.</p>
-          </div>
-        </div>
-
-        <div class="container right">
-          <div class="content">
-            <h1><i class="fas fa-fighter-jet"></i>2020</h1>
-            <h3>Asepalvelus</h3>
-            <p>Suoritin asepalveluksen.</p>
-          </div>
-        </div>
-
-        <div class="container left">
-          <div class="content">
-            <h1><i class="fas fa-briefcase"></i>2021 alkuvuosi / kesä</h1>
-            <h3>Workpower</h3>
-            <p>Toimin rakennusapulaisena useammalla työmaalla. Kesällä työskentelin Keski-Suomen rakennus- ja
-              raudoituksella, jossa tehtäviini kuului harjaterästen leikkaus ja taivutus, muottien hitsaaminen sekä
-              tilausten siirtely kurottajalla, trukilla ja nosturilla.</p>
-          </div>
-        </div>
-
-        <div class="container right">
-          <div class="content">
-            <h1><i class="fas fa-school"></i>2021–2025</h1>
-            <h3>Jamk – Tieto- ja viestintätekniikka</h3>
-            <p>Aloitin ICT-insinööriopinnot Jyväskylän ammattikorkeakoulussa vuonna 2021 ja valmistuin insinööriksi
-              (AMK) 2025. Opinnoissa painopisteinä olivat web-kehitys, ohjelmointi, tietoverkot ja palvelinjärjestelmät.
-            </p>
-          </div>
-        </div>
-
-        <div class="container left">
-          <div class="content">
-            <h1><i class="fas fa-briefcase"></i>2022 kesä / syksy</h1>
-            <h3>Workpower</h3>
-            <p>Toimin rakennusmiehenä erilaisissa kohteissa.</p>
-            <br>
-            <p>Syksyllä työskentelin päätoimisesti Rakennusliike Porrassalmen työmaalla lattiakorjauskohteessa
-              opintojen ohella.</p>
-          </div>
-        </div>
-
-        <div class="container right">
-          <div class="content">
-            <h1><i class="fas fa-industry"></i>2023 kevät</h1>
-            <h3>Lappaz.fi</h3>
-            <p>Perustin toiminimen aloittaakseni sivutoimisen yrittäjyyden.</p>
-            <br>
-            <p>Yritykseni keskittyy 3D-tulostukseen. Suunnittelen ja myyn omia 3D-tulostettuja tuotteita
-              erityisesti auto- ja sim racing -käyttöön verkkokauppani kautta.</p>
-          </div>
-        </div>
-
-        <div class="container left">
-          <div class="content">
-            <h1><i class="fas fa-briefcase"></i>2023 kevät</h1>
-            <h3>Istekki – harjoittelu</h3>
-            <p>Toimin harjoittelijana Istekissä palvelupisteasiantuntijana. Opin käyttämään AD- ja AAD-järjestelmiä ja
-              kehitin ongelmanratkaisu- sekä asiakaspalvelutaitojani.</p>
-          </div>
-        </div>
-
-        <div class="container right">
-          <div class="content">
-            <h1><i class="fas fa-briefcase"></i>2023 syksy → nykyinen</h1>
-            <h3>Istekki – palvelupisteasiantuntija</h3>
-            <p>Jatkoin harjoittelun jälkeen osa-aikaisena opintojen ohella ja siirryin myöhemmin täysipäiväiseen työsuhteeseen lähempänä valmistumista. Teen
-              palvelupistetyötä, jossa vastaan käyttäjätuesta ja erilaisista ICT-palveluihin liittyvistä tehtävistä.</p>
-          </div>
+        <div class="content_box">
+          <h1><i class="fas fa-shopping-cart"></i>Lappaz.fi verkkokauppa</h1>
+          <a href="https://www.lappaz.fi/" target="_blank" rel="noopener noreferrer">
+            <img src="images/lappaz.jpg" alt="Lappaz verkkokauppa">
+          </a>
+          <p>Lappaz.fi on toteutettu WordPressillä ja WooCommercella. Vastaan verkkokaupan teknisestä kehityksestä,
+            sisällönhallinnasta ja ylläpidosta. Olen lisäksi rakentanut erillisen modernin frontendin headless-mallilla,
+            jonka avulla kaupan suorituskykyä ja käyttökokemusta voidaan parantaa, mutta sitä ei ole vielä viety tuotantoon.</p>
         </div>
       </div>
     </section>
-    <!--- historia -->
+    <!--- projektit -->
 
-    <!--- portfolio / osaaminen -->
+        <!--- portfolio / osaaminen -->
     <section id="portfolio">
       <div class="heading-section parallax border">
         <h1><i class="fas fa-book-open icon"></i>Osaaminen</h1>
@@ -251,34 +181,130 @@
     </section>
     <!--- portfolio -->
 
-    <!--- projektit -->
-    <section id="projektit">
-      <div class="heading-section parallax border">
-        <h1><i class="fas fa-laptop-code icon"></i>Projektit</h1>
-      </div>
-      <div class="portfolio_container">
-        <div class="content_box">
-          <h1><i class="fas fa-laptop-code"></i>TilastoChat</h1>
-          <a href="https://tilastochat.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <img src="images/tilastochat.jpg" alt="TilastoChat">
-          </a>
-          <p>TilastoChat on toteutettu Next.js:llä ja Tailwindilla. Sovellus on chat-tyyppinen käyttöliittymä, jossa
-            keskustellaan tilastoihin liittyvistä aiheista. Taustalla hyödynnetään Tilastokeskuksen dataa ja ChatGPT
-            API:a. Käyttäjä voi esittää kysymyksiä, ja vastaukset pohjautuvat JSON-aineistoon.</p>
+    <!--- koulutus -->
+  <section id="koulutus">
+    <div class="heading-section parallax border">
+      <h1><i class="fas fa-graduation-cap icon"></i>Koulutus</h1>
+    </div>
+
+      <div class="koulutus_container">
+        <div class="koulutus_box">
+          <h1><i class="fas fa-graduation-cap"></i>2020</h1>
+          <h4>Ylioppilas</h4>
+          <h3>Jyväskylän Lyseon Lukio</h3>
+          <p>
+            Valmistuin ylioppilaaksi kirjoittamalla äidinkielen, englannin,
+            pitkän matematiikan, fysiikan ja kemian.
+          </p>
         </div>
 
-        <div class="content_box">
-          <h1><i class="fas fa-shopping-cart"></i>Lappaz.fi verkkokauppa</h1>
-          <a href="https://www.lappaz.fi/" target="_blank" rel="noopener noreferrer">
-            <img src="images/lappaz.jpg" alt="Lappaz verkkokauppa">
-          </a>
-          <p>Lappaz.fi on toteutettu WordPressillä ja WooCommercella. Vastaan verkkokaupan teknisestä kehityksestä,
-            sisällönhallinnasta ja ylläpidosta. Olen lisäksi rakentanut erillisen modernin frontendin headless-mallilla,
-            jonka avulla kaupan suorituskykyä ja käyttökokemusta voidaan parantaa, mutta sitä ei ole vielä viety tuotantoon.</p>
+        <div class="koulutus_box">
+          <h1><i class="fas fa-school"></i>2025</h1>
+          <h4>Insinööri (AMK)</h4>
+          <h3>JAMK - Tieto- ja viestintätekniikka</h3>
+          <p>
+            ICT-insinööriopinnot Jyväskylän ammattikorkeakoulussa.
+            Painopisteinä web-kehitys, ohjelmointi, tietoverkot ja
+            palvelinjärjestelmät.
+          </p>
         </div>
       </div>
-    </section>
-    <!--- projektit -->
+  </section>
+<!--- koulutus -->
+
+
+    <!--- historia -->
+  <section id="historia">
+      <div class="heading-section parallax border">
+        <h1><i class="fas fa-history icon"></i>Historia</h1>
+      </div>
+      <div class="timeline">
+        
+        <div class="container right">
+          <div class="content">
+            <h4>Palvelupisteasiantuntija</h4>
+            <h1><i class="fas fa-briefcase"></i>2023 syksy → nykyinen</h1>
+            <h3>Istekki</h3>
+            <p>Jatkoin harjoittelun jälkeen osa-aikaisena opintojen ohella ja siirryin myöhemmin täysipäiväiseen työsuhteeseen lähempänä valmistumista. Teen
+              palvelupistetyötä, jossa vastaan käyttäjätuesta ja erilaisista ICT-palveluihin liittyvistä tehtävistä.</p>
+          </div>
+        </div>
+
+        <div class="container left">
+          <div class="content">
+            <h4>Palvelupisteasiantuntija(harjoittelija)</h4>
+            <h1><i class="fas fa-briefcase"></i>2023 kevät</h1>
+            <h3>Istekki – harjoittelu</h3>
+            <p>Toimin harjoittelijana Istekissä palvelupisteasiantuntijana. Opin käyttämään AD- ja AAD-järjestelmiä ja
+              kehitin ongelmanratkaisu- sekä asiakaspalvelutaitojani.</p>
+          </div>
+        </div>
+
+        <div class="container right">
+          <div class="content">
+            <h4>Yrittäjä (sivutoiminen)</h4>
+            <h1><i class="fas fa-industry"></i>2023 kevät</h1>
+            <h3>Lappaz.fi</h3>
+            <p>Perustin toiminimen aloittaakseni sivutoimisen yrittäjyyden.</p>
+            <br>
+            <p>Yritykseni keskittyy 3D-tulostukseen. Suunnittelen ja myyn omia 3D-tulostettuja tuotteita
+              erityisesti auto- ja sim racing -käyttöön verkkokauppani kautta.</p>
+          </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+              <h4>Rakennusmies</h4>
+              <h1><i class="fas fa-briefcase"></i>2022 kesä / syksy</h1>
+              <h3>Workpower</h3>
+              <p>Toimin rakennusmiehenä erilaisissa kohteissa.</p>
+              <br>
+              <p>Syksyllä työskentelin päätoimisesti Rakennusliike Porrassalmen työmaalla lattiakorjauskohteessa
+                opintojen ohella.</p>
+            </div>
+          </div>
+
+        <div class="container right">
+            <div class="content">
+              <h4>Rakennusapulainen</h4>
+              <h1><i class="fas fa-briefcase"></i>2021 alkuvuosi / kesä</h1>
+              <h3>Workpower</h3>
+              <p>Toimin rakennusapulaisena useammalla työmaalla. Kesällä työskentelin Keski-Suomen rakennus- ja
+                raudoituksella, jossa tehtäviini kuului harjaterästen leikkaus ja taivutus, muottien hitsaaminen sekä
+                tilausten siirtely kurottajalla, trukilla ja nosturilla.</p>
+            </div>
+          </div>
+
+        <div class="container left">
+            <div class="content">
+              <h1><i class="fas fa-fighter-jet"></i>2020</h1>
+              <h3>Asepalvelus</h3>
+              <p>Suoritin asepalveluksen.</p>
+            </div>
+          </div>
+
+        <div class="container right">
+            <div class="content">
+              <h4>Rakennusapulainen</h4>
+              <h1><i class="fas fa-briefcase"></i>2020 kesä</h1>
+              <h3>Bolt.Works</h3>
+              <p>Toimin rakennusapulaisena useammilla työmailla, loppukesästä pääosin kaukomaalauksen työmailla.</p>
+            </div>
+          </div>
+
+        <div class="container left">
+          <div class="content">
+            <h4>Rakennusapulainen</h4>
+            <h1><i class="fas fa-briefcase"></i>2019 kesä</h1>
+            <h3>Bolt.Works</h3>
+            <p>Toimin rakennusapulaisena Laukaassa Rakennusliike Porrassalmen työmaalla.</p>
+          </div>
+        </div>
+
+      </div>
+  </section>
+    <!--- historia -->
+
 
     <!--- harrastukset -->
     <section id="harrastukset">
