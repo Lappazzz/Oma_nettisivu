@@ -109,92 +109,149 @@
     </section>
     <!--- projektit -->
 
-        <!--- portfolio / osaaminen -->
-    <section id="portfolio">
-      <div class="heading-section parallax border">
-        <h1><i class="fas fa-book-open icon"></i>Osaaminen</h1>
+<!--- portfolio / osaaminen -->
+<section id="portfolio">
+  <div class="heading-section parallax border">
+    <h1><i class="fas fa-book-open icon"></i>Osaaminen</h1>
+  </div>
+
+  <!-- Lyhyt yhteenveto (chips + kategoriat) -->
+  <div class="portfolio_container skills-grid">
+    <div class="portfolio_box skills-card">
+      <h1><i class="far fa-file-code"></i>Web dev</h1>
+      <p class="skills-description">
+        Moderni front-end ja web-sovellukset.
+      </p>
+      <div class="skill-chips">
+        <span class="skill-chip">HTML</span>
+        <span class="skill-chip">CSS</span>
+        <span class="skill-chip">JavaScript</span>
+        <span class="skill-chip">TypeScript</span>
+        <span class="skill-chip">React</span>
+        <span class="skill-chip">Next.js</span>
+        <span class="skill-chip">Tailwind CSS</span>
       </div>
-      <div class="portfolio_container">
-        <div class="portfolio_box">
-          <h1><i class="far fa-file-code"></i>HTML / CSS</h1>
-          <p>Hallitsen modernin front-end-kehityksen perusteet: semanttinen HTML, responsiivinen CSS ja
-            käytettävyyteen keskittyvä rakenne. Tämä sivusto kuuluu ensimmäisiin projekteihini, ja sen jälkeen olen
-            toteuttanut useita sivustoja ja käyttöliittymiä.</p>
-        </div>
+    </div>
 
-        <div class="portfolio_box">
-          <h1><i class="fab fa-react"></i>React & Next.js</h1>
-          <p>Olen toteuttanut useampia React- ja Next.js-sovelluksia, muun muassa headless-verkkokaupan
-            frontendin sekä erilaisia pienempiä appeja. Hallitsen komponenttipohjaisen kehityksen, tilanhallinnan
-            perusteet ja REST/JSON-rajapintojen hyödyntämisen.</p>
-        </div>
-
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-code"></i>JavaScript & TypeScript</h1>
-          <p>Käytän JavaScriptiä ja TypeScriptiä erityisesti web-kehityksessä. Osaan rakentaa rajapintaintegraatioita
-            ja käsitellä dataa selaimessa sekä palvelinpuolella (Next.js).</p>
-        </div>
-
-        <div class="portfolio_box">
-          <h1><i class="fab fa-linux"></i>Linux & palvelimet</h1>
-          <p>Olen käyttänyt Linuxia sekä kouluprojekteissa että omissa ratkaisuissani, esimerkiksi:</p>
-          <ul>
-            <li>Raspberry Pi -projektit (WireGuard, Pi-hole DNS, Home Assistant)</li>
-            <li>3D-tulostimen Klipper-firmware</li>
-            <li>VPS-palvelin (Apache/Nginx, Docker, PM2, MariaDB)</li>
-          </ul>
-        </div>
-
-        <div class="portfolio_box">
-          <h1><i class="fab fa-python"></i>Python</h1>
-          <p>Olen opiskellut Pythonin perusteita: ehtolauseita, toistorakenteita, funktioita, luokkia ja kokoelmia.
-            Olen käyttänyt Pythonia muun muassa pieniin automaatio- ja harjoitusprojekteihin.</p>
-        </div>
-
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-network-wired"></i>Tietoverkot</h1>
-          <p>Osaan tietoverkkojen perusteet, mukaan lukien kytkinten ja reitittimien peruskonfiguroinnin, VLANit,
-            palomuuri- ja VPN-ratkaisut (esim. WireGuard).</p>
-        </div>
-
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-diagram-project"></i>Projektitoiminta</h1>
-          <p>Tunnen OPF-kehikon ja projektitoiminnan perusperiaatteet. Olen tottunut dokumentoimaan työtäni ja
-            viemään projekteja eteenpäin vaiheittain.</p>
-        </div>
-
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-code"></i>C# ja C++</h1>
-          <p>Olen opiskellut C#- ja C++-kielien perusteita, muun muassa oliopohjaista ohjelmointia ja concurrent programming -aiheita.</p>
-        </div>
-
-        <div class="portfolio_box">
-          <h1><i class="fa-brands fa-android"></i>Android & React Native</h1>
-          <p>Olen tutustunut Android Studioon ja ohjelmointiin Kotlinilla sekä perehtynyt React Nativeen
-            mobiilisovellusten toteutuksessa.</p>
-        </div>
-
-        <div class="portfolio_box">
-          <h1><i class="far fa-images"></i>Kuvanmuokkaus</h1>
-          <p>Käytän vapaa-ajalla Photoshopia, Lightroomia ja After Effectsiä. En ole ammattilainen, mutta osaan tuottaa
-            siistiä perusjälkeä esimerkiksi verkkokaupan ja sosiaalisen median kuviin. Sivuston favicon on itse
-            suunnittelemani logo.</p>
-        </div>
-
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-cube"></i>Fusion 360 & CAD</h1>
-          <p>Suunnittelen 3D-malleja Fusion 360:llä. Esimerkkeinä auton juomatelineet, lisämittaritelineet ja
-            erilaiset sim racing -osat.</p>
-        </div>
-
-        <div class="portfolio_box">
-          <h1><i class="fa-solid fa-code"></i>Web-visualisointi</h1>
-          <p>Olen käyttänyt Tailwind CSS -kirjastoa web-visualisointiin sekä erilaisia komponenttikirjastoja
-            käyttöliittymien rakentamisessa.</p>
-        </div>
+    <div class="portfolio_box skills-card">
+      <h1><i class="fab fa-linux"></i>Infra & devops</h1>
+      <p class="skills-description">
+        Palvelimet, koti-infra ja käytännön ylläpito.
+      </p>
+      <div class="skill-chips">
+        <span class="skill-chip">Linux</span>
+        <span class="skill-chip">Docker</span>
+        <span class="skill-chip">VPS</span>
+        <span class="skill-chip">Apache / Nginx</span>
+        <span class="skill-chip">WireGuard</span>
+        <span class="skill-chip">Home Assistant</span>
+        <span class="skill-chip">Pi-hole</span>
       </div>
-    </section>
-    <!--- portfolio -->
+    </div>
+
+    <div class="portfolio_box skills-card">
+      <h1><i class="fas fa-toolbox"></i>Työkalut</h1>
+      <p class="skills-description">
+        Päivittäisessä käytössä olevat työkalut.
+      </p>
+      <div class="skill-chips">
+        <span class="skill-chip">Git</span>
+        <span class="skill-chip">GitHub</span>
+        <span class="skill-chip">VS Code</span>
+        <span class="skill-chip">Figma</span>
+        <span class="skill-chip">Postman</span>
+        <span class="skill-chip">Fusion 360</span>
+        <span class="skill-chip">Photoshop</span>
+        <span class="skill-chip">Lightroom</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISUAL DIVIDER BETWEEN SUMMARY AND LONG LIST -->
+  <div class="skills-divider"></div>
+
+  <!-- Pitkä, yksityiskohtainen versio -->
+  <div class="portfolio_container">
+    <div class="portfolio_box">
+      <h1><i class="far fa-file-code"></i>HTML / CSS</h1>
+      <p>Hallitsen modernin front-end-kehityksen perusteet: semanttinen HTML, responsiivinen CSS ja
+        käytettävyyteen keskittyvä rakenne. Tämä sivusto kuuluu ensimmäisiin projekteihini, ja sen jälkeen olen
+        toteuttanut useita sivustoja ja käyttöliittymiä.</p>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="fab fa-react"></i>React & Next.js</h1>
+      <p>Olen toteuttanut useampia React- ja Next.js-sovelluksia, muun muassa headless-verkkokaupan
+        frontendin sekä erilaisia pienempiä appeja. Hallitsen komponenttipohjaisen kehityksen, tilanhallinnan
+        perusteet ja REST/JSON-rajapintojen hyödyntämisen.</p>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="fa-solid fa-code"></i>JavaScript & TypeScript</h1>
+      <p>Käytän JavaScriptiä ja TypeScriptiä erityisesti web-kehityksessä. Osaan rakentaa rajapintaintegraatioita
+        ja käsitellä dataa selaimessa sekä palvelinpuolella (Next.js).</p>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="fab fa-linux"></i>Linux & palvelimet</h1>
+      <p>Olen käyttänyt Linuxia sekä kouluprojekteissa että omissa ratkaisuissani, esimerkiksi:</p>
+      <ul>
+        <li>Raspberry Pi -projektit (WireGuard, Pi-hole DNS, Home Assistant)</li>
+        <li>3D-tulostimen Klipper-firmware</li>
+        <li>VPS-palvelin (Apache/Nginx, Docker, PM2, MariaDB)</li>
+      </ul>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="fab fa-python"></i>Python</h1>
+      <p>Olen opiskellut Pythonin perusteita: ehtolauseita, toistorakenteita, funktioita, luokkia ja kokoelmia.
+        Olen käyttänyt Pythonia muun muassa pieniin automaatio- ja harjoitusprojekteihin.</p>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="fa-solid fa-network-wired"></i>Tietoverkot</h1>
+      <p>Osaan tietoverkkojen perusteet, mukaan lukien kytkinten ja reitittimien peruskonfiguroinnin, VLANit,
+        palomuuri- ja VPN-ratkaisut (esim. WireGuard).</p>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="fa-solid fa-diagram-project"></i>Projektitoiminta</h1>
+      <p>Tunnen OPF-kehikon ja projektitoiminnan perusperiaatteet. Olen tottunut dokumentoimaan työtäni ja
+        viemään projekteja eteenpäin vaiheittain.</p>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="fa-solid fa-code"></i>C# ja C++</h1>
+      <p>Olen opiskellut C#- ja C++-kielien perusteita, muun muassa oliopohjaista ohjelmointia ja concurrent programming -aiheita.</p>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="fa-brands fa-android"></i>Android & React Native</h1>
+      <p>Olen tutustunut Android Studioon ja ohjelmointiin Kotlinilla sekä perehtynyt React Nativeen
+        mobiilisovellusten toteutuksessa.</p>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="far fa-images"></i>Kuvanmuokkaus</h1>
+      <p>Käytän vapaa-ajalla Photoshopia, Lightroomia ja After Effectsiä. En ole ammattilainen, mutta osaan tuottaa
+        siistiä perusjälkeä esimerkiksi verkkokaupan ja sosiaalisen median kuviin. Sivuston favicon on itse
+        suunnittelemani logo.</p>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="fa-solid fa-cube"></i>Fusion 360 & CAD</h1>
+      <p>Suunnittelen 3D-malleja Fusion 360:llä. Esimerkkeinä auton juomatelineet, lisämittaritelineet ja
+        erilaiset sim racing -osat.</p>
+    </div>
+
+    <div class="portfolio_box">
+      <h1><i class="fa-solid fa-code"></i>Web-visualisointi</h1>
+      <p>Olen käyttänyt Tailwind CSS -kirjastoa web-visualisointiin sekä erilaisia komponenttikirjastoja
+        käyttöliittymien rakentamisessa.</p>
+    </div>
+  </div>
+</section>
+<!--- portfolio -->
 
     <!--- koulutus -->
   <section id="koulutus">
