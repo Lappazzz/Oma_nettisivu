@@ -1,61 +1,66 @@
 /*----- yleiset ------*/
 
-
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Metrophobic', sans-serif;
-  }
-  
-  p {
-    font-size: 17px;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 3em;
-  }
-  
-  section {
-    display: block;
-  }
-  
-  .photo {
-    width: 25px;
-  }
-  
-  /*----- yleiset ------*/
-  
-  /*----- parallax scrolling ------*/
-  
-  .background{
-    background-image: url("../images/wall1.png"), url("../images/wall1.png");
-    min-height: 1em;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    right: 0;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Metrophobic', sans-serif;
+}
 
-  .parallax {
-    background-image: url("../images/wall.jpg"), url("../images/wall1.png");
-    min-height: 1em;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 3;
+p {
+  font-size: 17px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3em;
+}
+
+section {
+  display: block;
+}
+
+.photo {
+  width: 25px;
+}
+
+/*----- yleiset ------*/
+
+
+/*----- parallax / taustat ------*/
+
+.background {
+  background-image: url("../images/wall.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax {
+  background-image: url("../images/wall.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .background {
+    background-attachment: scroll;   /* smoother on phones */
+    background-position: 70% center; /* move focus horizontally */
   }
-  
-  /*----- parallax scrolling ------*/
-  
-  /*----- header/navbar ------*/
-  
-  nav {
+}
+
+/*----- parallax / taustat ------*/
+
+
+/*----- header / navbar ------*/
+
+nav {
   display: flex;
-  justify-content: space-between;   /* was space-around */
+  justify-content: space-between;
   align-items: center;
   min-height: 8vh;
   background-color: #252525;
@@ -63,10 +68,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;                      /* stay within viewport */
+  width: 100%;
   opacity: 80%;
   z-index: 100000;
-  padding: 0 1rem;                  /* small side padding */
+  padding: 0 1rem;
 }
 
 .logo {
@@ -156,7 +161,6 @@ a:hover {
     overflow-x: hidden;
   }
 
-  /* element selector, not .nav */
   nav {
     max-width: 100vw;
   }
@@ -203,7 +207,7 @@ a:hover {
 }
 
 .toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px)
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .toggle .line2 {
@@ -211,176 +215,200 @@ a:hover {
 }
 
 .toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px)
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
-  
-  /*----- header/navbar ------*/
-  
-  /*Mobiilille burgermenu*/
-  
-  @media screen and (max-width:768px) {
-    body {
-      overflow-x: hidden;
-    }
+/*----- header / navbar ------*/
 
-    .nav {
-      max-width: 100vw;
-    }
-  
-    .nav-links {
-      position: absolute;
-      right: 0px;
-      height: 92vh;
-      top: 8vh;
-      background-color: #252525;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 50%;
-      transform: translateX(100%);
-      transition: 0.5s ease-in;
-    }
-  
-    .nav-links li {
-      opacity: 1;
-  
-    }
-  
-    .burger {
-      display: block;
-      cursor: pointer;
-  
-    }
-  
-    .nav-active {
-      transform: translateX(0%);
-    }
+
+/*----- tiedot (hero) ------*/
+
+.tiedot {
+  padding-top: 8vh;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tiedot_teksti {
+  width: 50%;
+  max-width: 600px;
+  padding: 2em;
+  margin: 2em;
+
+  background: rgba(0, 0, 0, 0.45); /* dark glass */
+  backdrop-filter: blur(4px);      /* optional, modern browsers */
+  -webkit-backdrop-filter: blur(4px);
+
+  border-radius: 0.75em;
+}
+
+.tiedot h1 {
+  color: aliceblue;
+}
+
+.tiedot p {
+  color: aliceblue;
+  font-size: 1.2em;
+}
+
+.tiedot_teksti h1 {
+  font-size: 2em;
+}
+
+/* photo side */
+
+.tiedot_photo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+
+  position: relative;
+  overflow: hidden; /* required for the fade */
+}
+
+.tiedot_photo img {
+  max-width: 100%;
+  max-height: 80vh;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5em;
+}
+
+/* fade + blur at bottom of photo (default / desktop) */
+.tiedot_photo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 10%; /* how much of the bottom fades */
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .tiedot_photo {
+    width: 100%;
+    padding: 1em 1.5em 2em;
   }
-  
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
+
+  .tiedot_photo img {
+    max-height: 50vh;
   }
-  
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px)
+
+  /* slightly smaller fade on mobile */
+  .tiedot_photo::after {
+    height: 25%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.03) 40%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
   }
-  
-  .toggle .line2 {
-    opacity: 0;
-  }
-  
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px)
-  }
-  
-  /*Mobiilille burgermenu*/
-  
-  
-  /*----- tiedot ------*/
-  
+}
+
+@media screen and (max-width: 768px) {
   .tiedot {
-  
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 8vh;
-    width: 100vw;
-    min-height: 100vh; 
-    height: auto;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .tiedot_teksti {
-    width: 40%;
-    padding: 2em 2em;
-    padding-bottom: 100vh;
-    min-width: 20em;
-  }
-  
-  .tiedot h1 {
-    color: aliceblue;
-  }
-  
-  .tiedot p {
-    color: aliceblue;
-    font-size: 1.2em;
-  }
-  
-  .tiedot_teksti h1 {
-    font-size: 2em;
-  }
-  
-  /*----- tiedot ------*/
-  
-  
-  /*----- heading sectionit ------*/
-  
-  .heading-section {
-    background-color: #252525;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    padding: 20px;
-    position: relative;
-    font-size: 1.1em;
-  }
-  
-  .border {
-    border: 0px;
-    border-top: 5px black;
-    border-bottom: 5px black;
-    border-style: solid;
-  }
-  
-  .border-up {
-    border: 0px;
-    border-top: 5px black;
-    border-style: solid;
-  }
-  
-  .border-down {
-    border: 0px;
-    border-bottom: 5px black;
-    border-style: solid;
-  }
-  
-  /*----- heading sectionit ------*/
-  
-  #koulutus {
-    background: lightgray;
-    display: flex;
     flex-direction: column;
-  }
-  
-  #historia,
-  #portfolio,
-  #harrastukset,
-  #projektit {
-    background: lightgray;
-    padding-bottom: 4em 0;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    background-attachment: scroll;
   }
 
-  /*----- koulutus (portfolio-tyyli) ------*/
+  .tiedot_teksti {
+    width: auto;
+    max-width: 700px;
+    padding: 2em 1.5em 1em;
+    margin: 1em;
+  }
+
+  .tiedot_photo {
+    width: 100%;
+    padding: 1em 1.5em 2em;
+  }
+
+  .tiedot_photo img {
+    max-height: 50vh;
+  }
+
+  /* slightly smaller fade on mobile */
+  .tiedot_photo::after {
+    height: 25%;
+  }
+}
+
+/*----- tiedot ------*/
+
+
+/*----- heading sectionit ------*/
+
+.heading-section {
+  background-color: #252525;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  padding: 20px;
+  position: relative;
+  font-size: 1.1em;
+}
+
+.border {
+  border: 0;
+  border-top: 5px black solid;
+  border-bottom: 5px black solid;
+}
+
+.border-up {
+  border: 0;
+  border-top: 5px black solid;
+}
+
+.border-down {
+  border: 0;
+  border-bottom: 5px black solid;
+}
+
+/*----- heading sectionit ------*/
+
+
+/*----- osiot taustat ------*/
+
+#koulutus {
+  background: lightgray;
+  display: flex;
+  flex-direction: column;
+}
+
+#historia,
+#portfolio,
+#harrastukset,
+#projektit {
+  background: lightgray;
+  padding-bottom: 4em;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+
+/*----- koulutus (portfolio-tyyli) ------*/
 
 .koulutus_container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center; /* Changed to center for better balance */
+  justify-content: center;
   width: 90%;
   margin: 2em auto;
   height: 100%;
@@ -397,13 +425,10 @@ a:hover {
   height: auto;
   text-align: center;
   margin: 1.25em;
-  
-  /* --- THE FIX IS HERE --- */
   width: 25em;
   flex-grow: 1;
   max-width: 45%;
   min-width: 300px;
-  /* ----------------------- */
 }
 
 .koulutus_box h1 {
@@ -428,290 +453,290 @@ a:hover {
   text-align: left;
 }
 
-/* Add a media query to stack them on mobile phones */
 @media screen and (max-width: 768px) {
-    .koulutus_box {
-        max-width: 100%;
-    }
+  .koulutus_box {
+    max-width: 100%;
+  }
 }
 
 /*----- koulutus (portfolio-tyyli) ------*/
-  
-  /*----- timeline/historia ------*/
 
-  
+
+/*----- timeline / historia ------*/
+
 .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 1em auto;
-    padding: 1.75em auto;
-    padding-top: 30px; 
-    margin-top: solid black;
+  position: relative;
+  max-width: 1200px;
+  margin: 1em auto;
+  padding: 1.75em 0;
+  padding-top: 30px;
 }
 
 /* The vertical line */
 .timeline::after {
-    content: '';
-    position: absolute;
-    width: 0.5em;
-    background-color: white;
-    top: 10px; 
-    bottom: 0;
-    left: 50%;
-    margin-left: -4px;
-    box-shadow: 0.5em 0 0.6em rgb(75, 75, 75);
-    z-index: 0;
+  content: '';
+  position: absolute;
+  width: 0.5em;
+  background-color: white;
+  top: 10px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -4px;
+  box-shadow: 0.5em 0 0.6em rgb(75, 75, 75);
+  z-index: 0;
 }
 
-/* NEW: The Arrow Head pointing UP */
+/* Arrow head pointing up */
 .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0; 
-    height: 0; 
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 25px solid white;
-    z-index: 1;
-    filter: drop-shadow(0.2em 0.2em 0.2em rgba(75, 75, 75, 0.5));
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid white;
+  z-index: 1;
+  filter: drop-shadow(0.2em 0.2em 0.2em rgba(75, 75, 75, 0.5));
 }
-  
+
+.container {
+  padding: 0.5em 2em;
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid rgb(0, 0, 255);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0.5em 0 0.6em grey;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 25px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 3;
+  left: 25px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.content {
+  padding: 1.5em 1.875em;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  box-shadow: 0.5em 0.6em 0.6em grey;
+  border-radius: 0.3em;
+  overflow: hidden;
+}
+
+.content h1 {
+  text-align: center;
+  color: black;
+}
+
+.content h3 {
+  text-align: center;
+  color: rgb(0, 0, 255);
+  padding-bottom: 1.2em;
+  font-size: 1.23em;
+}
+
+.content p {
+  color: black;
+}
+
+/* Mobile timeline */
+@media screen and (max-width: 700px) {
+  .timeline::after {
+    left: 31px;
+  }
+
   .container {
-    padding: 0.5em 2em;
-    position: relative;
-    width: 50%;
-    text-align: center;
+    width: 85%;
+    padding-left: 4em;
+    padding-right: 0;
   }
-  
-  .container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid rgb(0, 0, 255);
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-    box-shadow: 0.5em 0 0.6em grey;
-  }
-  
-  .left {
-    left: 0;
-  }
-  
-  .right {
-    left: 50%;
-  }
-  
-  .right::after {
-    left: -16px;
-  }
-  
-  .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 25px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-  }
-  
-  .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 3;
-    left: 25px;
+
+  .container::before {
+    left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
-  
-  .content {
-    padding: 1.5em 1.875em;
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    box-shadow: 0.5em 0.6em 0.6em grey;
-    border-radius: 0.3em;
-    overflow: hidden;
+
+  .left::after,
+  .right::after {
+    left: 15px;
   }
-  
-  .content h1 {
-    text-align: center;
-    color: black;
+
+  .right {
+    left: 0;
   }
-  
-  .content h3 {
-    text-align: center;
-    color: rgb(0, 0, 255);
-    padding-bottom: 1.2em;
-    font-size: 1.23em;
-  }
-  
-  .content p {
-    color: black;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 700px) {
-  
-    /* Place the timelime to the left */
-    .timeline::after {
-      left: 31px;
-    }
-  
-    .container {
-      width: 85%;
-      padding-left: 4em;
-      padding-right: 0em;
-    }
-  
-    .container::before {
-      left: 60px;
-      border: medium solid white;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent white transparent transparent;
-    }
-  
-    .left::after,
-    .right::after {
-      left: 15px;
-    }
-  
-    .right {
-      left: 0%;
-    }
-  }
-  
-  /*----- timeline/historia ------*/
-  
-  
-  /*----- portfolio ------*/
-  
-  .portfolio_container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 90%;
-    margin: 2em auto;
-    height: 100%;
-    color: lightgray;
-    padding: 1.25em;
-  }
-  
-  .portfolio_box {
-  
-    padding: 1.5em 1.875em;
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    box-shadow: 0.5em 0.6em 0.6em grey;
-    border-radius: 0.3em;
-    overflow: hidden;
-    height: auto;
-    text-align: center;
-    margin: 1.25em;
-    width: 40vh;
-  }
-  
-  /*----- portfolio ------*/
-  
-  /*----- harrastukset ------*/
-  .content_box {
-  
-    padding: 1.5em 1.875em;
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    box-shadow: 0.5em 0.6em 0.6em grey;
-    border-radius: 0.3em;
-    overflow: hidden;
-    height: auto;
-    text-align: center;
-    margin: 1.25em;
-    width: 100%;
-  }
-  
-  .content_box img {
-    width: 175px;
-    margin: auto;
-    float: left;
-    padding-right: 1em;
-  }
-  
-  /*----- harrastukset ------*/
-  
-  /*----- fontit ------*/
-  .content_box h1,
-  .portfolio_box h1 {
-    text-align: center;
-    color: black;
-    padding: 0.5em;
-  }
-  
-  .content_box h3,
-  .portfolio_box h3 {
-    text-align: center;
-    color: rgb(0, 0, 255);
-    padding: 0.5em 0;
-  }
-  
-  .content_box p,
-  .portfolio_box {
-    color: black;
-    text-align: left;
-  }
-  
-  /*----- fontit ------*/
-  
-  /*----- yhteystiedot/footer ------*/
-  .yhteystiedot_container {
-    color: dimgrey;
-    padding-bottom: 12em;
-    background-color: #252525;
-  }
-  
-  .content_yhteystiedot {
-    color: rgb(255, 255, 255);
-    background-color: #252525;
-    text-align: center;
-    padding: 1em;
-    border: 2em;
-    letter-spacing: 0.2em;
-    font-size: 0.8em;
-  
-  }
-  
-  .yhteystiedot_container i {
-    padding: 0.4em;
-    font-size: 2em;
-  }
-  
-  /*----- yhteystiedot/footer ------*/
-  
-  /*----- icons ------*/
-  i {
-    font-size: 1.2em;
-    padding: 0.2em;
-    color: rgb(0, 0, 255);
-  }
-  
-  .icon {
-    font-size: 1.2em;
-    padding: 0.2em;
-    color: rgb(0, 0, 255);
-    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
-  }
-  
-  /*----- icons ------*/
-  
+}
+
+/*----- timeline / historia ------*/
+
+
+/*----- portfolio ------*/
+
+.portfolio_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  margin: 2em auto;
+  height: 100%;
+  color: lightgray;
+  padding: 1.25em;
+}
+
+.portfolio_box {
+  padding: 1.5em 1.875em;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  box-shadow: 0.5em 0.6em 0.6em grey;
+  border-radius: 0.3em;
+  overflow: hidden;
+  height: auto;
+  text-align: center;
+  margin: 1.25em;
+  width: 40vh;
+}
+
+/*----- portfolio ------*/
+
+
+/*----- harrastukset ------*/
+
+.content_box {
+  padding: 1.5em 1.875em;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  box-shadow: 0.5em 0.6em 0.6em grey;
+  border-radius: 0.3em;
+  overflow: hidden;
+  height: auto;
+  text-align: center;
+  margin: 1.25em;
+  width: 100%;
+}
+
+.content_box img {
+  width: 175px;
+  margin: auto;
+  float: left;
+  padding-right: 1em;
+}
+
+/*----- harrastukset ------*/
+
+
+/*----- fontit ------*/
+
+.content_box h1,
+.portfolio_box h1 {
+  text-align: center;
+  color: black;
+  padding: 0.5em;
+}
+
+.content_box h3,
+.portfolio_box h3 {
+  text-align: center;
+  color: rgb(0, 0, 255);
+  padding: 0.5em 0;
+}
+
+.content_box p,
+.portfolio_box {
+  color: black;
+  text-align: left;
+}
+
+/*----- fontit ------*/
+
+
+/*----- yhteystiedot / footer ------*/
+
+.yhteystiedot_container {
+  color: dimgrey;
+  padding-bottom: 12em;
+  background-color: #252525;
+}
+
+.content_yhteystiedot {
+  color: rgb(255, 255, 255);
+  background-color: #252525;
+  text-align: center;
+  padding: 1em;
+  border: 2em;
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+}
+
+.yhteystiedot_container i {
+  padding: 0.4em;
+  font-size: 2em;
+}
+
+/*----- yhteystiedot / footer ------*/
+
+
+/*----- icons ------*/
+
+i {
+  font-size: 1.2em;
+  padding: 0.2em;
+  color: rgb(0, 0, 255);
+}
+
+.icon {
+  font-size: 1.2em;
+  padding: 0.2em;
+  color: rgb(0, 0, 255);
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+}
+
+/*----- icons ------*/
