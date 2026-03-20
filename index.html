@@ -141,6 +141,23 @@
               Proxmoxin päälle, jossa palvelut eriytetään virtuaalikoneisiin ja
               kontteihin, hallitun ja skaalautuvan rakenteen saavuttamiseksi.</p>
           </div>
+
+          <div class="content_box">
+            <h1><i class="fas fa-cube"></i>STL-hintalaskuri & 3D-katseluohjelma</h1>
+            <a href="https://github.com/Lappazzz/homelab" target="_blank" rel="noopener noreferrer">
+              <img src="images/stl-calculator.svg" alt="STL-hintalaskuri">
+            </a>
+          <p>STL-hintalaskuri on Next.js:llä, Reactilla ja Three.js:llä toteutettu web-sovellus 3D-tulostuksen nopeaan ja turvalliseen hinnoitteluun. Sovellus sisältää interaktiivisen 3D-katseluohjelman, joka analysoi ladatun <code>.stl</code>-tiedoston tilavuuden ja mitat suoraan käyttäjän selaimessa (client-side). Tämä takaa nollatason viiveen ja täyden yksityisyyden, sillä alkuperäistä 3D-mallia ei koskaan lähetetä palvelimelle.</p>
+
+          <p>Itse hinnoittelulogiikka (materiaalikustannukset, katteet, tuntitaksat) on suojattu turvallisesti Next.js:n serverless-backendin puolelle ympäristömuuttujiin. Laskin ottaa huomioon mm. materiaalin tiheyden (g/cm³), volymetrisen tulostusnopeuden (mm³/s) sekä tulostimen fyysiset rajoitteet (kuten P1S tulostusalan).</p>
+          <p style="margin-top: 15px;">
+            <a href="https://stl-price-calculator.netlify.app/" target="_blank" rel="noopener noreferrer" style="margin-right: 20px; font-weight: bold; color: inherit;">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/Lappazzz/STL-price-calculator" target="_blank" rel="noopener noreferrer" style="font-weight: bold; color: inherit;">
+              <i class="fab fa-github"></i> Lähdekoodi (GitHub)
+            </a>
+          </div>
         </div>
       </div>
     </section>
