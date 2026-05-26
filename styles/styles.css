@@ -444,7 +444,8 @@ a:hover {
 
 /*----- osiot taustat ------*/
 
-#koulutus {
+#koulutus,
+#sertifikaatit {
   background: lightgray;
   display: flex;
   flex-direction: column;
@@ -453,8 +454,7 @@ a:hover {
 #historia,
 #portfolio,
 #harrastukset,
-#projektit,
-#sertifikaatit {
+#projektit {
   background: lightgray;
   padding-bottom: 4em;
   justify-content: space-around;
