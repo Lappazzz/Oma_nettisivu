@@ -453,7 +453,8 @@ a:hover {
 #historia,
 #portfolio,
 #harrastukset,
-#projektit {
+#projektit,
+#sertifikaatit {
   background: lightgray;
   padding-bottom: 4em;
   justify-content: space-around;

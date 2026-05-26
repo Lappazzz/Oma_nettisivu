@@ -17,7 +17,6 @@
   </head>
 
   <body>
-    <!--- header/navbar-->
     <nav>
       <div class="logo">
         <h1 class="logo">
@@ -30,19 +29,17 @@
         <li><a href="#projektit" class="active">Projektit</a></li>
         <li><a href="#portfolio" class="active">Osaaminen</a></li>
         <li><a href="#koulutus" class="active">Koulutus</a></li>
+        <li><a href="#sertifikaatit" class="active">Sertifikaatit</a></li>
         <li><a href="#historia" class="active">Historia</a></li>
         <li><a href="#harrastukset" class="active">Harrastukset</a></li>
       </ul>
       <div class="burger">
         <div class="line1"></div>
-        <div class="line2"></div>
+        <div class="line2 =============="></div>
         <div class="line3"></div>
       </div>
     </nav>
     <script src="javascript/app.js"></script>
-    <!--- header/navbar -->
-
-    <!--- Omat tiedot -->
     <section id="tiedot">
       <div class="tiedot background">
         <div class="tiedot_teksti">
@@ -67,7 +64,6 @@
             itsenäisesti ja pysyn rauhallisena myös paineen alla. Olen helposti lähestyttävä, huumorintajuinen ja tulen
             hyvin toimeen erilaisten ihmisten kanssa.</p>
           <br>
-          <!-- CTA button -->
           <div class="hero-actions">
             <a href="#yhteystiedot" class="btn btn-primary">Ota yhteyttä</a>
           </div>
@@ -78,9 +74,6 @@
         </div>
       </div>
     </section>
-    <!--- Omat tiedot -->
-
-    <!--- projektit -->
     <section id="projektit">
       <div class="heading-section parallax border-down">
         <h1><i class="fas fa-laptop-code icon"></i>Projektit</h1>
@@ -111,7 +104,7 @@
           <a href="https://www.beta.lappaz.fi/" target="_blank" rel="noopener noreferrer">
             <img src="images/lappaz.jpg" alt="Lappaz verkkokauppa">
           </a>
-            <p>beta.lappaz.fi on headless-arkkitehtuurilla toteutettu uusi käyttöliittymä.
+            <p>beta.lappaz.fi is headless-arkkitehtuurilla toteutettu uusi käyttöliittymä.
               WordPress + WooCommerce toimii taustajärjestelmänä ja frontend on rakennettu
               Next.js/React-teknologioilla REST-rajapinnan päälle.</p>
 
@@ -144,15 +137,11 @@
         </div>
       </div>
     </section>
-    <!--- projektit -->
-
-<!--- portfolio / osaaminen -->
-<section id="portfolio">
+    <section id="portfolio">
   <div class="heading-section parallax border">
     <h1><i class="fas fa-book-open icon"></i>Osaaminen</h1>
   </div>
 
-  <!-- Lyhyt yhteenveto (chips + kategoriat) -->
   <div class="portfolio_container skills-grid">
     <div class="portfolio_box skills-card">
       <h1><i class="far fa-file-code"></i>Web dev</h1>
@@ -204,10 +193,8 @@
     </div>
   </div>
 
-  <!-- VISUAL DIVIDER BETWEEN SUMMARY AND LONG LIST -->
   <div class="skills-divider"></div>
 
-  <!-- Pitkä, yksityiskohtainen versio -->
   <div class="portfolio_container">
     <div class="portfolio_box">
       <h1><i class="far fa-file-code"></i>HTML / CSS</h1>
@@ -288,10 +275,7 @@
     </div>
   </div>
 </section>
-<!--- portfolio -->
-
-    <!--- koulutus -->
-  <section id="koulutus">
+<section id="koulutus">
     <div class="heading-section parallax border">
       <h1><i class="fas fa-graduation-cap icon"></i>Koulutus</h1>
     </div>
@@ -319,11 +303,25 @@
         </div>
       </div>
   </section>
-<!--- koulutus -->
+<section id="sertifikaatit">
+    <div class="heading-section parallax border">
+      <h1><i class="fas fa-certificate icon"></i>Sertifikaatit</h1>
+    </div>
 
-
-    <!--- historia -->
-  <section id="historia">
+      <div class="koulutus_container">
+        <div class="koulutus_box">
+          <h1><i class="fas fa-certificate"></i>ITIL® 5 Foundation (WIP)</h1>
+          <h4>PeopleCert</h4>
+          <h3>2026</h3>
+          <p>
+            Valmistautuminen ja opiskelu käynnissä sertifiointitestiä varten. 
+            Sertifikaatti osoittaa ITIL-viitekehyksen, IT-palvelunhallinnan (ITSM) 
+            parhaiden käytäntöjen ja elinkaarimallien ydinperiaatteiden hallintaa.
+          </p>
+        </div>
+      </div>
+  </section>
+<section id="historia">
       <div class="heading-section parallax border">
         <h1><i class="fas fa-history icon"></i>Historia</h1>
       </div>
@@ -368,7 +366,7 @@
               <h3>Workpower</h3>
               <p>Toimin rakennusmiehenä erilaisissa kohteissa.</p>
               <br>
-              <p>Syksyllä työskentelin päätoimisesti Rakennusliike Porrassalmen työmaalla lattiakorjauskohteessa
+              <p>Syksyllä työskenteli päätoimisesti Rakennusliike Porrassalmen työmaalla lattiakorjauskohteessa
                 opintojen ohella.</p>
             </div>
           </div>
@@ -388,7 +386,7 @@
             <div class="content">
               <h1><i class="fas fa-fighter-jet"></i>2020</h1>
               <h3>Asepalvelus</h3>
-              <p>Suoritin asepalveluksen.</p>
+              <p>Suoritti asepalveluksen.</p>
             </div>
           </div>
 
@@ -397,7 +395,7 @@
               <h4>Rakennusapulainen</h4>
               <h1><i class="fas fa-briefcase"></i>2020 kesä</h1>
               <h3>Bolt.Works</h3>
-              <p>Toimin rakennusapulaisena useammilla työmailla, loppukesästä pääosin kaukomaalauksen työmailla.</p>
+              <p>Toimin rakennusapulaisena useammilla työmaalla, loppukesästä pääosin kaukomaalauksen työmailla.</p>
             </div>
           </div>
 
@@ -412,10 +410,6 @@
 
       </div>
   </section>
-    <!--- historia -->
-
-
-    <!--- harrastukset -->
     <section id="harrastukset">
       <div class="heading-section parallax border">
         <h1><i class="fas fa-mug-hot icon"></i>Harrastukset</h1>
@@ -478,9 +472,6 @@
         </div>
       </div>
     </section>
-    <!--- harrastukset -->
-
-    <!--- Yhteystiedot -->
     <section id="yhteystiedot">
       <div class="heading-section parallax border-up">
         <h1><i class="far fa-address-book icon"></i>Yhteystiedot</h1>
@@ -515,8 +506,6 @@
         </div>
       </div>
     </section>
-    <!--- Yhteystiedot -->
-
     <script src="javascript/lightbox-plus-jquery.js"></script>
   </body>
 
